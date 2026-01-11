@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
 	FiArrowRight,
 	FiMail,
@@ -18,14 +18,12 @@ import {
 	HiOutlineFilm,
 	HiOutlineHome,
 	HiOutlineCube,
-	HiOutlineTruck,
 	HiOutlineBriefcase,
 } from "react-icons/hi";
 import { RiPlantLine, RiLightbulbLine, RiLeafLine } from "react-icons/ri";
 
 const BrightwheelLanding = () => {
 	const [scrolled, setScrolled] = useState(false);
-	const [activeService, setActiveService] = useState<number | null>(null);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 	// Hero background images from Unsplash
@@ -594,8 +592,6 @@ const BrightwheelLanding = () => {
 							<div
 								key={index}
 								className="service-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100"
-								onMouseEnter={() => setActiveService(index)}
-								onMouseLeave={() => setActiveService(null)}
 							>
 								{/* Image */}
 								<div className="relative h-48 overflow-hidden">
